@@ -1,0 +1,132 @@
+.pulse-container{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 20;
+  .pulse{
+    width: 60px;
+    height: 60px;
+    background-color: #116e8c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &:before,
+    &:after{
+    content: '';
+    position: absolute;
+    border: 2px solid #116e8c;
+    left: -20px;
+    opacity: 0;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: pulse 2.5s linear infinite;
+  }
+    &:after{
+      animation-delay: 1.25s;
+    }
+    &:hover{
+      background-color: #108166;
+      transition: all .5s ease 0s;
+    }
+    img{
+      width: 65%;
+    }
+    .pulse-social{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: -180px;
+      right: 6px;
+      animation: appearance .5s ease;
+      a{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-top: 5px;
+        &:first-child{
+          background-color: #168de2;
+        }
+        &:last-child{
+          background-color: #34B7F1;
+        }
+        &:nth-child(2){
+          background-color: #25D366;
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+@keyframes appearance {
+  0%{
+    opacity: 0;
+    top: -100px;
+  }
+  100%{
+    opacity: 1;
+    top: -180px;
+  }
+}
+@keyframes appearance-reverse {
+  100%{
+    opacity: 1;
+    top: -180px;
+  }
+  0%{
+    opacity: 0;
+    top: -100px;
+  }
+}
+@keyframes appearance-mobile{
+  0%{
+    opacity: 0;
+    top: -100px;
+  }
+  100%{
+    opacity: 1;
+    top: -165px;
+  }
+}
+
+
+
+@media (screen and max-width: 767px) {
+  .pulse-container{
+    bottom: 30px;
+    right: 30px;
+    .pulse{
+      width: 50px;
+      height: 50px;
+      .pulse-social{
+        top: -165px;
+        right: 3px;
+        animation: appearance-mobile .5s ease;
+        a{
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+  }
+}

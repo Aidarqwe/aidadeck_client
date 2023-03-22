@@ -1,0 +1,43 @@
+.map-wrapper{
+  display: flex;
+  justify-content: center;
+  .map{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.map-info{
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 20px;
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (screen and max-width: 767px){
+  .map-wrapper{
+    flex-direction: column;
+    align-items: center;
+    .map{
+      margin-bottom: 20px;
+    }
+    .map-info{
+      display: none;
+    }
+  }
+}
+@media (screen and max-width: 320px){
+  .map{
+    width: 200px;
+  }
+}
+

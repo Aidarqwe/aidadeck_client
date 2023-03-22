@@ -1,0 +1,32 @@
+.gallery-wrapper{
+  h1{
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+}
+.swiper-slide{
+  width: 100%;
+  height: auto;
+  img{
+    width: 100%;
+    height: 70vh;
+    object-fit: contain;
+  }
+}
+.swiper-pagination-bullet{
+  background-color: white;
+}
+
+@media (screen and max-width: 767px){
+  .gallery-wrapper{
+    h1{
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+  }
+  .swiper-slide{
+    img{
+      object-fit: cover;
+    }
+  }
+}

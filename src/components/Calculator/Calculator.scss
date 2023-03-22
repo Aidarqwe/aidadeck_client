@@ -1,0 +1,149 @@
+.calculator-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .calculator-inputs{
+    display: flex;
+  }
+  .calculator-item{
+    margin-bottom: 20px;
+    width: 50%;
+    label{
+      font-size: 18px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    input{
+      padding: 15px;
+      border-radius: 5px;
+      width: 90%;
+      font-size: 16px;
+      outline: 1px solid #8a8a8a;
+      border: none;
+    }
+    select{
+      padding: 15px;
+      border-radius: 5px;
+      width: 96%;
+      font-size: 16px;
+      outline: 1px solid #8a8a8a;
+      border: none;
+      cursor: pointer;
+    }
+    .calculator-error{
+      margin-top: 5px;
+      color: red;
+    }
+  }
+  button{
+    width: 99%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #25D366;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    &:disabled{
+      background-color: #cccccc;
+      color: #757575;
+    }
+  }
+}
+.modal{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s all;
+  z-index: 999;
+}
+.modal.active{
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-content{
+  position: relative;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: scale(.5);
+  transition: all .4s;
+  .modal-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  p{
+    margin-bottom: 5px;
+    span{
+      font-weight: 700;
+    }
+  }
+}
+.modal-content.active{
+  transform: scale(1);
+}
+
+.important-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  a{
+    color: #00b1ff;
+    font-size: 18px;
+    &:hover{
+      color: #58cee4;
+    }
+  }
+}
+
+@media (screen and max-width: 767px){
+  .calculator-body{
+    .calculator-inputs{
+      flex-direction: column;
+    }
+    .calculator-item{
+      width: 100%;
+      label, input, select{
+        font-size: 14px;
+      }
+      select{
+        width: 98%;
+      }
+      .calculator-error{
+        font-size: 10px;
+        margin-left: 5px;
+      }
+    }
+  }
+  .modal-content{
+    width: 200px;
+    height: 100px;
+    padding: 35px;
+    text-align: center;
+    .modal-close{
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+}
