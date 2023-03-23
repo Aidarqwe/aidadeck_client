@@ -1,7 +1,7 @@
 import React from 'react';
 import {YMaps, Map, Placemark} from "@pbe/react-yandex-maps";
 import "./Map.scss";
-import location from "../../img/location-white.png";
+import location from "../../img/location-white.svg";
 
 
 function MyMap() {

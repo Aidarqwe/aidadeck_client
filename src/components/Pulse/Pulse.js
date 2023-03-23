@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import "./Pulse.scss";
-import phoneAccept from "../../img/phone-accept.png";
-import phoneDecline from "../../img/phone-decline.png";
-import mail from "../../img/mail.png";
-import whatsapp from "../../img/whatsapp.png";
-import telegram from "../../img/telegram.png";
+import phoneAccept from "../../img/phone-accept.svg";
+import phoneDecline from "../../img/phone-decline.svg";
+import mail from "../../img/mail.svg";
+import whatsapp from "../../img/whatsapp.svg";
+import telegram from "../../img/telegram.svg";
 
 function Pulse() {
 	const [isClick, setIsClick] = useState(false);

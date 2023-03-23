@@ -5,7 +5,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  //filter: blur(1px);
 }
 .header-content{
   margin-top: 40px;
@@ -18,7 +17,7 @@
   }
   h1{
     max-width: 80%;;
-    color: #036183;
+    color: #FB5259;
     margin-bottom: 15px;
     font-weight: 700;
     font-size: 56px;
@@ -44,8 +43,8 @@
 
     transition: all .6s ease 0s;
     &:hover{
-      color: #052f4f;
-      background-color: #58cee4;
+      //color: #052f4f;
+      background-color: #3697a6;
 
     }
   }

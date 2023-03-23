@@ -1,9 +1,9 @@
 import React from 'react';
 import "./Footer.scss";
 import MyMap from "../Map/Map";
-import telegramWhite from "../../img/telegram-white.png";
-import whatsappWhite from "../../img/whatsapp-white.png";
-import instWhite from "../../img/instagram-white.png"
+import telegramWhite from "../../img/telegram-white.svg";
+import whatsappWhite from "../../img/whatsapp-white.svg";
+import instWhite from "../../img/instagram-white.svg";
 
 
 function Footer() {

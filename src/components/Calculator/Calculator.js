@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
 import "./Calculator.scss";
-import close from "../../img/close.png";
+import close from "../../img/close.svg";
 
 function Calculator() {
 	const shippingOptions = [
@@ -68,7 +68,7 @@ function Calculator() {
 		if(!regexp.test(e.target.value)){
 			setWeightError("Введите число !")
 		}else if(e.target.value < 20){
-			setWeightError("Вес должен быть больше 20кг")
+			setWeightError("Вес должен быть больше 20кг!")
 		}else {
 			setWeightError("");
 		}

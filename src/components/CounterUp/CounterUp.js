@@ -9,15 +9,15 @@ function CounterUp() {
 		<ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
 			<div className="counter-wrapper">
 				<div className="counter-body">
-					{counterOn && <CountUp start={0} end={5468} duration={3} delay={0}/>}
+					<div className="counter-up">{counterOn && <CountUp start={0} end={5468} duration={3} delay={0}/>}</div>
 					<p>Доставленных посылок</p>
 				</div>
 				<div className="counter-body">
-					{counterOn && <CountUp start={0} end={2156} duration={3} delay={0}/>}
+					<div className="counter-up">{counterOn && <CountUp start={0} end={2156} duration={3} delay={0}/>}</div>
 					<p>Клиентов</p>
 				</div>
 				<div className="counter-body">
-					{counterOn && <CountUp start={0} end={650} duration={3} delay={0}/>}
+					<div className="counter-up">{counterOn && <CountUp start={0} end={650} duration={3} delay={0}/>}</div>
 					<p>Перевозок в год</p>
 				</div>
 			</div>

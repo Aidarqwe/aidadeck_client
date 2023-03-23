@@ -5,14 +5,24 @@ import {Pagination, Autoplay} from "swiper";
 import Section from "../../components/Section/Section";
 import 'swiper/css';
 import 'swiper/css/pagination';
-import swiperImg1 from "../../img/swiper-img1.jpg";
-import swiperImg2 from "../../img/swiper-img2.jpg";
-import swiperImg3 from "../../img/swiper-img3.jpg";
-import swiperImg4 from "../../img/swiper-img4.jpg";
-import swiperImg5 from "../../img/swiper-img5.jpg";
-import swiperImg6 from "../../img/swiper-img6.jpg";
-import swiperImg7 from "../../img/swiper-img7.jpg";
-import swiperImg8 from "../../img/swiper-img8.jpg";
+import swiperImg1 from "../../img/swiper-image1.jpg";
+import swiperImg2 from "../../img/swiper-image2.jpg";
+import swiperImg3 from "../../img/swiper-image3.jpg";
+import swiperImg4 from "../../img/swiper-image4.jpg";
+import swiperImg5 from "../../img/swiper-image5.jpg";
+import swiperImg6 from "../../img/swiper-image6.jpg";
+import swiperImg7 from "../../img/swiper-image7.jpg";
+import swiperImg8 from "../../img/swiper-image8.jpg";
+import swiperImg9 from "../../img/swiper-image9.jpg";
+import swiperImg10 from "../../img/swiper-image10.jpg";
+import swiperImg11 from "../../img/swiper-image11.jpg";
+import swiperImg12 from "../../img/swiper-image12.jpg";
+import swiperImg13 from "../../img/swiper-image13.jpg";
+import swiperImg14 from "../../img/swiper-image14.jpg";
+import swiperImg15 from "../../img/swiper-image15.jpg";
+
+
+
 
 function Gallery() {
 	return (
@@ -54,6 +64,27 @@ function Gallery() {
 					</SwiperSlide>
 					<SwiperSlide>
 						<img src={swiperImg8} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg9} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg10} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg11} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg12} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg13} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg14} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg15} alt="img"/>
 					</SwiperSlide>
 					<div className="swiper-pagination"></div>
 				</Swiper>

@@ -2,13 +2,13 @@ import React from 'react';
 import "./Contact.scss";
 import Section from "../../components/Section/Section";
 import Form from "../../components/Form/Form";
-import chinaIcon from "../../img/china-icon.png";
-import russiaIcon from "../../img/russia-icon.png";
-import mailBlack from "../../img/mail-black.png";
-import whatsappBlack from "../../img/whatsapp-black.png";
-import telegramBlack from "../../img/telegram-black.png";
+import chinaIcon from "../../img/china-icon.svg";
+import russiaIcon from "../../img/russia-icon.svg";
+import mailBlack from "../../img/mail-black.svg";
+import whatsappBlack from "../../img/whatsapp-black.svg";
+import telegramBlack from "../../img/telegram-black.svg";
 import instBlack from "../../img/instagram-black.svg";
-import wechatBlack from "../../img/wechat-black.png";
+import wechatBlack from "../../img/wechat-black.svg";
 
 
 
