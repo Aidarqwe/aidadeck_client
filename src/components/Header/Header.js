@@ -15,7 +15,7 @@ function Header() {
 				<Section>
 					<div className="header-content">
 						<h2>БЫСТРО. УДОБНО. НАДËЖНО</h2>
-						<h1>Доставка грузов из Китая от компании AIDADECK Logistics</h1>
+						<h1>Доставка грузов из Китая от компании <span>AIDA</span><span>DECK</span> <span>Logistics</span></h1>
 						<h4>Мы предлагаем вам профессиональное сопровождение  международных перевозок грузов любой сложности.
 							<br></br>0% за оплату поставщику. Работаем от 20кг.</h4>
 						<button onClick={handleOnClick}>Свяжитесь с нами</button>

@@ -20,6 +20,8 @@ import swiperImg12 from "../../img/swiper-image12.jpg";
 import swiperImg13 from "../../img/swiper-image13.jpg";
 import swiperImg14 from "../../img/swiper-image14.jpg";
 import swiperImg15 from "../../img/swiper-image15.jpg";
+import swiperImg16 from "../../img/swiper-image16.jpg";
+import swiperImg17 from "../../img/swiper-image17.jpg";
 
 
 
@@ -85,6 +87,12 @@ function Gallery() {
 					</SwiperSlide>
 					<SwiperSlide>
 						<img src={swiperImg15} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg16} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg17} alt="img"/>
 					</SwiperSlide>
 					<div className="swiper-pagination"></div>
 				</Swiper>

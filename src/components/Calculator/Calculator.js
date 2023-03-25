@@ -59,7 +59,7 @@ function Calculator() {
 	const calculateShippingCost = () => {
 		const densityElem = weight/volume;
 		const totalNum = densityElem * shippingOption.pricePerKg;
-		return [setTotal(+totalNum.toFixed(1)) , setDensity(+densityElem.toFixed(1)), setActive(true)];
+		return [setTotal(Math.floor(+totalNum * 100) / 100) , setDensity(Math.floor(+densityElem * 100) / 100), setActive(true)];
 	};
 
 	function handleWeightChange(e) {
