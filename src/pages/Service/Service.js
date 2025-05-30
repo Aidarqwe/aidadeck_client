@@ -9,7 +9,6 @@ function Service() {
 	return (
 		<Section>
 			<div className="service">
-				<h1>Наши услуги</h1>
 				<Cards/>
 				<Transport/>
 				<Goods/>

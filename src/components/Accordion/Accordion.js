@@ -15,7 +15,7 @@ function Accordion() {
 				</div>
 				<div className="accordion-item">
 					<input className="accordion-input" type="checkbox" name="item" id="item-2"/>
-					<label className="accordion-title" htmlFor="item-2">Когда делается оплата за услуги логистики?</label>
+					<label className="accordion-title" htmlFor="item-2">Когда осуществляется оплата за услуги логистики?</label>
 					<div className="accordion-text">
 						<p>Вся доставка оплачивается при получении вами груза в Москве.</p>
 					</div>
@@ -86,7 +86,7 @@ function Accordion() {
 					<input className="accordion-input" type="checkbox" name="item" id="item-7"/>
 					<label className="accordion-title" htmlFor="item-7">Имеются ли у вас скидки и программы лояльности для постоянных клиентов?</label>
 					<div className="accordion-text">
-						<p>Конечно! Постоянные заказчики всегда могут рассчитывать на скидки, интересные спецпредложения и бонусы. Компания «AIDADECK LOGISTICS» нацелена на длительное и взаимовыгодное сотрудничество со всеми клиентами и всегда готова пойти им навстречу.</p>
+						<p>Конечно! Постоянные заказчики всегда могут рассчитывать на скидки, интересные спецпредложения и бонусы. Компания «AIDADECK&nbsp;LOGISTICS» нацелена на длительное и взаимовыгодное сотрудничество со всеми клиентами и всегда готова пойти им навстречу.</p>
 					</div>
 				</div>
 				<div className="accordion-item">

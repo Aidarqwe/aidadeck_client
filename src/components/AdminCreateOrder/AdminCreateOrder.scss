@@ -1,0 +1,123 @@
+.create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0 20px;
+  @media (screen and max-width: 767px){
+    padding: 60px 0 20px;
+  }
+}
+
+.input-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.custom-select {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  color: #000;
+
+  .select-header {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    @media (screen and max-width: 767px){
+      font-size: 12px;
+    }
+    .arrow {
+      transition: transform 0.2s;
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    @media (screen and max-width: 767px){
+      font-size: 12px;
+    }
+
+    .select-option {
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
+
+.order-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 500px;
+  transition: border-color 0.3s ease;
+  @media (screen and max-width: 767px){
+    width: 250px;
+    font-size: 12px;
+  }
+}
+
+.order-input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.create-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  @media (screen and max-width: 767px){
+    font-size: 12px;
+  }
+}
+
+.create-btn:hover {
+  background-color: #45a049;
+}
+
+.order-created-message {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.order-input.error,
+.custom-select.error {
+  box-shadow: 0 4px 20px red;
+}

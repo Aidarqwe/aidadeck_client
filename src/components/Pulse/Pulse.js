@@ -17,7 +17,7 @@ function Pulse() {
 							<div className="pulse-social">
 								<a href="mailto:AIDADECKLOGISTICS@yandex.ru"><img src={mail} alt="img"/></a>
 								<a href="https://wa.me/8613025100413" target="_blank" rel="noreferrer"><img src={whatsapp} alt="img"/></a>
-								<a href="https://t.me/AIDADECKLOGISTICS" target="_blank" rel="noreferrer"><img src={telegram} alt="img"/></a>
+								<a href="https://t.me/BOLOTOVYRYSKELDI" target="_blank" rel="noreferrer"><img src={telegram} alt="img"/></a>
 							</div>
 							<img src={phoneDecline} alt="img"/>
 						</div>)

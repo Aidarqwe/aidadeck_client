@@ -1,22 +1,55 @@
-import React, {useState} from 'react';
-import {Link, useNavigate} from "react-router-dom";
+import React, {useContext, useState, useEffect} from 'react';
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import "./Navigation.scss";
 import logo from "../../img/logo.png";
-import mail from "../../img/mail.svg";
-import whatsapp from "../../img/whatsapp.svg";
-import telegram from "../../img/telegram.svg";
-import instagram from "../../img/instagram.svg";
+import adminImg from "../../img/admin-img.svg";
+import {Context} from "../../index";
+import {observer} from "mobx-react-lite";
 
 function Navigation() {
+	const {store} = useContext(Context);
 	const [menuActive, setMenuActive] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+	const [backgroundTransparent, setBackgroundTransparent] = useState(true);
 	const body = document.body;
-	const navigate = useNavigate()
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	const items = [{value: "О компании", href: "/about", key: 1},
 					{value: "Услуги", href: "/service", key: 2},
 					{value: "Расчеты", href: "/calculation", key: 3},
 					{value: "Вопрос-ответ", href: "/questions", key: 4},
 					{value: "Галерея", href: "/gallery", key: 5},
-					{value: "Контакты", href: "/contact", key: 6}]
+					{value: "Контакты", href: "/contact", key: 6},
+					{value: "Для бизнеса", href: "/legal", key: 7},
+	]
+
+	useEffect(() => {
+		if (window.innerWidth > 767) {
+			setMenuActive(false);
+		}
+
+		const handleScroll = () => {
+			if (window.scrollY > window.innerHeight - 600) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
+		};
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
+	useEffect(() => {
+		if (location.pathname === '/' || location.pathname === '/legal') {
+			setBackgroundTransparent(false);
+		} else {
+			setBackgroundTransparent(true);
+		}
+	}, [location.pathname]);
 
 	function refreshPage(){
 		navigate("/");
@@ -27,12 +60,22 @@ function Navigation() {
 		window.scrollTo(0,0);
 	}
 
+	function linkTrackCargo(){
+		navigate("/track");
+		scrollTop();
+	}
+
+	function linkToAdmin(){
+		navigate("/admin");
+		scrollTop();
+	}
+
 	return (
-		<div className="header">
+		<div className={`header ${scrolled || backgroundTransparent ? "scrolled" : ""}`}>
 			<div className="container">
 				<div className="header-body">
 					<Link to="/" className="header-logo"
-						  onClick={refreshPage}>
+					      onClick={refreshPage}>
 						<img src={logo} alt="img"/>
 					</Link>
 					<div className={menuActive ? "header-burger active" : "header-burger"}
@@ -40,7 +83,7 @@ function Navigation() {
 						<span></span>
 					</div>
 					<nav className={menuActive ? "header-menu active" : "header-menu"}
-					     onClick={() => setMenuActive(false) & body.removeAttribute("class")}>
+						 onClick={() => setMenuActive(false) & body.removeAttribute("class")}>
 						<ul className="header-list">
 							{items.map(item =>
 								<li key={item.key} onClick={() => scrollTop()}>
@@ -48,17 +91,27 @@ function Navigation() {
 								</li>
 							)}
 						</ul>
-						<div className="header-social">
-							<a href="mailto:AIDADECKLOGISTICS@yandex.ru"><img src={mail} alt="img"/></a>
-							<a href="https://wa.me/8613025100413" target="_blank" rel="noreferrer" ><img src={whatsapp} alt="img"/></a>
-							<a href="https://t.me/AIDADECKLOGISTICS" target="_blank" rel="noreferrer" ><img src={telegram} alt="img"/></a>
-							<a href="https://instagram.com/bolotov0804?igshid=YmMyMTA2M2Y=" target="_blank" rel="noreferrer" ><img src={instagram} alt="img"/></a>
+						<div className="nav_usr menu">
+							<button className="nav_btn" onClick={() => linkTrackCargo()}>Отслеживать товар</button>
+							{
+								store.isAuth &&
+								<button onClick={() => linkToAdmin()} className="admin_btn"><img src={adminImg}
+																								 alt="img"/></button>
+							}
 						</div>
 					</nav>
+					<div className="nav_usr">
+						<button className="nav_btn" onClick={() => linkTrackCargo()}>Отслеживать товар</button>
+						{
+							store.isAuth &&
+							<button onClick={() => linkToAdmin()} className="admin_btn"><img src={adminImg} alt="img"/>
+							</button>
+						}
+					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
 
-export default Navigation;
+export default observer(Navigation);

@@ -22,6 +22,13 @@ import swiperImg14 from "../../img/swiper-image14.jpg";
 import swiperImg15 from "../../img/swiper-image15.jpg";
 import swiperImg16 from "../../img/swiper-image16.jpg";
 import swiperImg17 from "../../img/swiper-image17.jpg";
+import swiperImg18 from "../../img/swiper-image18.jpg";
+import swiperImg19 from "../../img/swiper-image19.jpg";
+import swiperImg20 from "../../img/swiper-image20.jpg";
+import swiperImg21 from "../../img/swiper-image21.jpg";
+import swiperImg22 from "../../img/swiper-image22.jpg";
+import swiperImg23 from "../../img/swiper-image23.jpg";
+import swiperImg24 from "../../img/swiper-image24.jpg";
 
 
 
@@ -43,6 +50,27 @@ function Gallery() {
 					pagination={{el: ".swiper-pagination", clickable: true}}
 					modules={[Autoplay, Pagination]}
 				>
+					<SwiperSlide>
+						<img src={swiperImg18} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg19} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg20} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg21} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg22} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg23} alt="img"/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={swiperImg24} alt="img"/>
+					</SwiperSlide>
 					<SwiperSlide>
 						<img src={swiperImg1} alt="img"/>
 					</SwiperSlide>

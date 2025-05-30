@@ -71,14 +71,17 @@ function Cards() {
 	]
 	return (
 		<div className="card-wrapper">
-			{services.map(item =>
-				<div className="card-body" key={item.id}>
-					<div className="img-wrapper"><img src={item.img} alt="img"/></div>
-					<h3>{item.title}</h3>
-					<p>{item.text}</p>
+			<h1>Наши услуги</h1>
+			<div className="cards">
+				{services.map(item =>
+					<div className="card-body" key={item.id}>
+						<div className="img-wrapper"><img src={item.img} alt="img"/></div>
+						<h3>{item.title}</h3>
+						<p>{item.text}</p>
+					</div>
+				)}
+			</div>
 
-				</div>
-			)}
 		</div>
 	);
 }
