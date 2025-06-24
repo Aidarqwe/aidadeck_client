@@ -2,6 +2,7 @@ import axios from 'axios';
 import {AuthResponse} from "./types";
 
 export const API_URL = "http://localhost:5000/api";
+// export const API_URL = "https://delivery.aidadeck-logistics.ru/api";
 
 const $api = axios.create({
 	withCredentials: true,
