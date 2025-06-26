@@ -33,8 +33,8 @@ function Contact() {
 						<a href="tel: +79673671612"><img src={russiaIcon} alt="img"/>+7(967)367-16-12</a>
 						<a href="mailto: ltd.trackon@gmail.com"><img src={mailBlack}
 																	 alt="img"/>ltd.trackon@gmail.com</a>
-						<a href="https://t.me/ltd_trackon" target="_blank" rel="noreferrer"><img
-							src={telegramBlack} alt="img"/>@ltd_trackon</a>
+						<a href="https://t.me/aidadeck_support_bot" target="_blank" rel="noreferrer"><img
+							src={telegramBlack} alt="img"/>@aidadeck_support_bot</a>
 						<h3>Следите за новостями</h3>
 						<a href="https://t.me/aidadecklogistics" target="_blank" rel="noreferrer"><img
 							src={telegramBlack} alt="img"/>@aidadecklogistics</a>
