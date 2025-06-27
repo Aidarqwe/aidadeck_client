@@ -54,3 +54,10 @@ li{
 a{
   text-decoration: none;
 }
+
+.b24-widget-button-position-bottom-left{
+  @media (max-width: 767px) {
+      left: 30px !important;
+      bottom: 22px !important;
+  }
+}
